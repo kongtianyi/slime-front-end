@@ -1,15 +1,15 @@
 <template>
-    <a-locale-provider :locale="locale">
+    <a-config-provider :locale="locale">
         <div id="app">
             <simple-data></simple-data>
         </div>
-    </a-locale-provider>
+    </a-config-provider>
 
 </template>
 
 <script>
     import SimpleData from './components/SimpleData.vue'
-    import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN'
+    import zh_CN from 'ant-design-vue/lib/locale-provider/zh_CN';
 
     export default {
         name: 'App',
@@ -18,7 +18,7 @@
         },
         data() {
             return {
-                locale: zhCN,
+                locale: zh_CN,
             };
         },
     }
@@ -31,6 +31,5 @@
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
     }
 </style>
